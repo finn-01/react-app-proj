@@ -48,7 +48,11 @@ const AppProvider = ({ children }) => {
 		fetchData();
 	}, [searchTerm]);
 
-	return <AppContext.Provider value="valus">{children}</AppContext.Provider>;
+	return (
+		<AppContext.Provider value={{ loading, cocktails }}>
+			{children}
+		</AppContext.Provider>
+	);
 };
 export const useGlobalContext = () => {
 	return useContext(AppContext);
