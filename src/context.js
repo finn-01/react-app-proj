@@ -1,0 +1,17 @@
+import React, { useState, useContext, useEffect } from "react";
+
+const url = "https://www.thecocktaildb.com/api/json/v1/1/search.php?s=";
+const AppContext = React.createContext();
+
+const AppProvider = ({ children }) => {
+	const [loading, setLoading] = useState(false);
+	const [searchTerm, setSearchTerm] = useState("");
+	const [cocktails, setCocktails] = useState([]);
+
+	return <AppContext.Provider value="valus">{children}</AppContext.Provider>;
+};
+export const useGlobalContext = () => {
+	return useContext(AppContext);
+};
+
+export { AppContext, AppProvider };
