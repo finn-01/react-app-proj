@@ -11,7 +11,7 @@ const CocktailList = () => {
 		return <Loading />;
 	}
 	if (cocktails.length < 1) {
-		return <h2>No cocktail matched your search</h2>;
+		return <h2 className="section-title">No cocktail matched your search</h2>;
 	}
 
 	return (
