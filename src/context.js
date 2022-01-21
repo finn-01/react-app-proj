@@ -49,7 +49,7 @@ const AppProvider = ({ children }) => {
 	}, [searchTerm]);
 
 	return (
-		<AppContext.Provider value={{ loading, cocktails }}>
+		<AppContext.Provider value={{ loading, cocktails, setSearchTerm }}>
 			{children}
 		</AppContext.Provider>
 	);
